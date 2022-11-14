@@ -1,11 +1,6 @@
 
 body {
     background-color: #ffffff;
-    background-image: url("./assets/bg-picture.svg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: right 150px;
-    background-size: 760px;
     width: 1200px;
     margin: 0 auto;
     padding-left: 120px;
@@ -86,100 +81,6 @@ a:link {
 }
 
 
-/* SIDEBAR */
-.sidebar {
-    display: flex;
-    flex-direction: column;
-    position: sticky;
-    width: 385px;
-    top: 150px;
-    float: left;
-}
-
-.sidebar__link {
-    font-family: 'Francois One';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 48px;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-}
-
-.sidebar__hr {
-    background-color: #BDBDBD;
-    height: 1px;
-    width: 365px;
-    border: none;
-    margin-bottom: 60px;
-    float: left;
-}
-
-
-/* MAIN */
-
-
-.documentation {
-    padding-top: 70px;
-    margin-left: 420px;
-}
-
-sup {
-    vertical-align: 80%;
-    font-family: 'Farro';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 15px;
-    line-height: 30px;
-    letter-spacing: 0.04em;
-    text-transform: capitalize;
-}
-
-.chapter__h2 {
-    font-family: 'Francois One';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 48px;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    padding-top: 70px;
-    margin-bottom: 40px;
-}
-
-.chapter__p {
-    font-family: 'PT Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 28px;
-    line-height: 48px;
-}
-
-.underline {
-    text-decoration: underline;
-}
-
-em {
-    font-weight: bold;
-}
-
-i {
-    font-style: italic;
-}
-
-.grey-bg {
-    background-color: #DADADA;
-}
-
-.chapter__h2::before {
-    content: "";
-    width: 100px;
-    height: 8px;
-    background-color: #000000;
-    display: block;
-    margin-bottom: 15px;
-}
-
 .footer {
     height: 150px;
 }
@@ -221,6 +122,7 @@ i {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+
 }
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
@@ -231,7 +133,7 @@ i {
     border: none;
     border-radius: 8px;
     overflow: hidden;
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    
   }
 /* This container is needed to position the front and back side */
 .gallery__card-inner {
