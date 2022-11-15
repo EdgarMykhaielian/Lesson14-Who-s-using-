@@ -85,17 +85,25 @@ a:link {
     padding: 0 10px;
 }
 
-
-/* SIDEBAR */
-.sidebar {
+/* MAIN */
+._container {
     display: flex;
-    flex-direction: column;
-    position: sticky;
-    width: 385px;
-    top: 150px;
-    float: left;
 }
 
+.sidebar {
+    position: sticky;
+    width: 385px;
+    height: 462px;
+    top: 150px;
+    
+    
+}
+.documentation {
+    padding-top: 70px;
+    max-width: 785px;
+    margin-left: 30px;
+    
+}
 .sidebar__link {
     font-family: 'Francois One';
     font-style: normal;
@@ -115,15 +123,7 @@ a:link {
     float: left;
 }
 
-
-/* MAIN */
-
-
-.documentation {
-    padding-top: 70px;
-    margin-left: 420px;
-}
-
+/* FONTS */
 sup {
     vertical-align: 80%;
     font-family: 'Farro';
@@ -183,78 +183,3 @@ i {
 .footer {
     height: 150px;
 }
-
-/* WHO IS USING */
-
-.who__h2{
-    font-family: 'Roboto', sans-serif;
-    font-weight: 600;
-    font-size: 36px;
-    line-height: 48px;
-    letter-spacing: 0.04em;
-    color: #000000;
-    padding-top: 150px;
-}
-.who__h2::before {
-    content: "";
-    width: 100px;
-    height: 8px;
-    background-color: #000000;
-    display: inline-block;
-    align-items: baseline;
-    transform: translateY(-100%);
-    margin-right: 15px;
-}
-.who__devider {
-    background-color: #BDBDBD;
-    height: 1px;
-    width: 1200px;
-    border: none;
-    margin: auto;
-    margin-top: 40px;
-    margin-bottom: 20px;
-}
-
-
-
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-}
-
-/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-.gallery__card {
-    background-color: transparent;
-    width: 270px;
-    height: 180px;
-    border: none;
-    border-radius: 8px;
-    overflow: hidden;
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
-  }
-/* This container is needed to position the front and back side */
-.gallery__card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-  }
-  /* Do an horizontal flip when you move the mouse over the flip box container */
-.gallery__card:hover .gallery__card-inner {
-    transform: rotateY(180deg);
-  }
-  
-  /* Position the front and back side */
-  .gallery__card-front, .gallery__card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden; /* Safari */
-    backface-visibility: hidden;
-  }
-  .gallery__card-back {
-    transform: rotateY(180deg);
-  } 

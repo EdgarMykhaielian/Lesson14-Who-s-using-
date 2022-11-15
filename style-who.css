@@ -146,7 +146,7 @@ a:link {
   }
   /* Do an horizontal flip when you move the mouse over the flip box container */
 .gallery__card:hover .gallery__card-inner {
-    transform: rotateY(180deg);
+    transform: rotateX(180deg);
   }
   
   /* Position the front and back side */
@@ -158,5 +158,5 @@ a:link {
     backface-visibility: hidden;
   }
   .gallery__card-back {
-    transform: rotateY(180deg);
+    transform: rotateX(180deg);
   } 
