@@ -1,0 +1,162 @@
+
+body {
+    background-color: #ffffff;
+    width: 1200px;
+    margin: 0 auto;
+    padding-left: 120px;
+    padding-right: 120px;
+}
+
+a,
+li {
+    text-decoration: none;
+    list-style: none;
+}
+
+a:visited,
+a:active,
+a:link {
+    text-decoration: none;
+    color: black;
+}
+
+/* HEADER */
+.header {
+    height: 80px;
+    width: 1200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    /* background-color: rgba(255,255,255, 0.9); */
+    background-color: #fff;
+
+}
+
+.header__nav {
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+}
+
+.header__menu {
+    display: flex;
+    flex-direction: row;
+    padding-left: 50px;
+}
+
+.header__logo {
+    right: 120px;
+}
+
+.header__lang-select {
+    font-family: 'Tourney';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    border: 1px solid #000000;
+    text-transform: uppercase;
+    border: none;
+}
+
+.header__menu-item,
+.header__devider {
+    font-family: 'Staatliches';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 28px;
+    letter-spacing: 0.03em;
+    color: black;
+    text-transform: uppercase;
+}
+
+.header__devider {
+    display: block;
+    padding: 0 10px;
+}
+
+
+.footer {
+    height: 150px;
+}
+
+/* WHO IS USING */
+
+.who__h2{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: 0.04em;
+    color: #000000;
+    padding-top: 150px;
+}
+.who__h2::before {
+    content: "";
+    width: 100px;
+    height: 8px;
+    background-color: #000000;
+    display: inline-block;
+    align-items: baseline;
+    transform: translateY(-100%);
+    margin-right: 15px;
+}
+.who__devider {
+    background-color: #BDBDBD;
+    height: 1px;
+    width: 1200px;
+    border: none;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.gallery__card {
+    background-color: transparent;
+    width: 270px;
+    height: 180px;
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    
+  }
+/* This container is needed to position the front and back side */
+.gallery__card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+.gallery__card:hover .gallery__card-inner {
+    transform: rotateX(180deg);
+  }
+  
+  /* Position the front and back side */
+  .gallery__card-front, .gallery__card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  .gallery__card-back {
+    transform: rotateX(180deg);
+  } 

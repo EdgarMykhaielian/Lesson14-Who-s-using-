@@ -1,27 +1,48 @@
+
 body {
-    max-width: 1200px;
+    background-color: #ffffff;
+    background-image: url("./assets/bg-picture.svg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right 150px;
+    background-size: 760px;
+    width: 1200px;
     margin: 0 auto;
     padding-left: 120px;
     padding-right: 120px;
-    position: relative;
 }
 
-a,li {
+a,
+li {
     text-decoration: none;
     list-style: none;
 }
+
 a:visited,
-a:active {
+a:active,
+a:link {
     text-decoration: none;
     color: black;
 }
 
+/* HEADER */
 .header {
     height: 80px;
+    width: 1200px;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
+    position: fixed;
+    /* background-color: rgba(255,255,255, 0.9); */
+    background-color: #fff;
+
+}
+
+.header__nav {
+    width: 400px;
+    display: flex;
+    flex-direction: row;
 }
 
 .header__menu {
@@ -29,10 +50,11 @@ a:active {
     flex-direction: row;
     padding-left: 50px;
 }
+
 .header__logo {
-    position: absolute;
     right: 120px;
 }
+
 .header__lang-select {
     font-family: 'Tourney';
     font-style: normal;
@@ -63,6 +85,45 @@ a:active {
     padding: 0 10px;
 }
 
+/* MAIN */
+._container {
+    display: flex;
+}
+
+.sidebar {
+    position: sticky;
+    width: 385px;
+    height: 462px;
+    top: 150px;
+    
+    
+}
+.documentation {
+    padding-top: 70px;
+    max-width: 785px;
+    margin-left: 30px;
+    
+}
+.sidebar__link {
+    font-family: 'Francois One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.sidebar__hr {
+    background-color: #BDBDBD;
+    height: 1px;
+    width: 365px;
+    border: none;
+    margin-bottom: 60px;
+    float: left;
+}
+
+/* FONTS */
 sup {
     vertical-align: 80%;
     font-family: 'Farro';
@@ -70,12 +131,11 @@ sup {
     font-weight: 300;
     font-size: 15px;
     line-height: 30px;
-letter-spacing: 0.04em;
-text-transform:capitalize;
-
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
 }
 
-.main__h2 {
+.chapter__h2 {
     font-family: 'Francois One';
     font-style: normal;
     font-weight: 400;
@@ -87,25 +147,39 @@ text-transform:capitalize;
     margin-bottom: 40px;
 }
 
-.main__p {
+.chapter__p {
     font-family: 'PT Sans';
-font-style: normal;
-font-weight: 400;
-font-size: 28px;
-line-height: 48px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 48px;
 }
+
 .underline {
     text-decoration: underline;
 }
+
 em {
     font-weight: bold;
 }
+
 i {
     font-style: italic;
 }
+
 .grey-bg {
     background-color: #DADADA;
 }
+
+.chapter__h2::before {
+    content: "";
+    width: 100px;
+    height: 8px;
+    background-color: #000000;
+    display: block;
+    margin-bottom: 15px;
+}
+
 .footer {
     height: 150px;
 }
